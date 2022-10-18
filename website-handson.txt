@@ -1,0 +1,14 @@
+aws s3api create-bucket --bucket taranawebsite --region us-east-1
+
+C:\Users\TARANA\Desktop>aws s3api put-object --bucket taranawebsite --key website.html
+
+aws s3 ls s3://taranawebsite
+
+aws s3 cp website s3://taranawebsite --recursive
+
+aws s3 website s3://taranawebsite/ --index-document website.html
+
+aws s3 ls s3://taranawebsite
+
+aws s3 presign s3://taranawebsite/website.html
+
